@@ -685,27 +685,7 @@ function toggledropdown() {
 var searcH = document.querySelector("#A1");
 
 searcH.addEventListener("input",searchFunc);
-/*
-function searchFunc() {
-    dropDown.innerHTML = ""; // Clear dropdown content
-    var searchTerm = this.value.trim().toLowerCase(); // Get search term and convert to lowercase
-    if (searchTerm === "") {
-        return; // If search term is empty, do nothing
-    }
-    var matchedProducts = myProducts.products.filter(product => {
-        return product.title.toLowerCase().search(searchTerm); // Check if product title contains search term
-    });
-    console.log(matchedProducts);
-    if (matchedProducts.length === 0) {
-        dropDown.innerHTML = "<div>No matching products found</div>";
-        return;
-    }
 
-    matchedProducts.forEach(product => {
-        dropDown.innerHTML += `<div>${product.title}</div><br>`;
-    });
-}
-*/
 function searchFunc(){
     var searchTerm = this.value.trim().toLowerCase();
     dropDown.innerHTML = "";
