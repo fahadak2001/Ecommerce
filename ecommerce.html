@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <style>
+        .container {
+            position: relative;
+            width: 90%;
+            margin: auto;
+        }
+        .products{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 20px;
+        }
+        .products .product{
+            margin: 0 10px;
+        }
+        .product footer{
+            display: flex;
+            justify-content: space-between;
+        }
+        .product footer h4:last-child{
+            text-decoration: line-through;
+        }
+        .products .product img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .btns {
+            text-align: center;
+        }
+        .searchh{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .search-style{
+            width: 250px;
+            height: 20px;
+            margin-bottom: 10px;
+            border-color: darkgrey;
+            border-radius:  15px 
+        }
+        .dropdown {
+            position: absolute;
+            top: 110px;
+            width: 250px;
+            height: auto;
+            z-index: 1;
+            background-color: rgb(187, 197, 197);
+            display: none; 
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Products</h1>
+            <div onclick="toggledropdown()" class="searchh"><input id="A1" class="search-style" type="text" placeholder="search here">
+                <div class="dropdown">dropdown</div>
+            </div>
+        <div class="btns">
+            <button onclick="getAllProducts()">All</button>
+            <button onclick="getSmartPhones()">Smartphones</button>
+            <button onclick="getLaptops()">Laptops</button>
+            <button onclick="getFragrances()">Fragrance</button>
+            <button onclick="getGroceries()">Groceries</button>
+            <button onclick="getDecorations()">Home Decoration</button>
+        </div>
+        <div class="products"></div>
+    </div>
+    <script src="./ecommerce.js"></script>
+</body>
+
+</html>
